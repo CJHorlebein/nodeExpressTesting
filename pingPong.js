@@ -5,9 +5,8 @@ const port = 3000;
 
 app.use(express.static(__dirname));
 
-app.get("/home", function(req, res) {
-    console.log("Hey, someone just sent me an HTTP request to the route: GET /foo");
-    res.send("Hi! Thanks for saying GET /foo");
+app.get("/ping", function(req, res) {
+    res.send("PONG");
 });
 
 app.listen(port, function() {
